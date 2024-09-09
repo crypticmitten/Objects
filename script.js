@@ -3,12 +3,14 @@ let table = document.getElementById("myTable");
 let tableBody = document.getElementById("tableBody");
 
 
-function Book(title,author,pageNum,read){
-    this.title = title;
-    this.author = author;
-    this.numOfPages = pageNum;
-    this.read = read;
-    this.info = function(){
+class Book{
+    constructor(title,author,pageNum,read){
+        this.title = title;
+        this.author = author;
+        this.numOfPages = pageNum;
+        this.read = read;
+    }
+    info(){
         let text = this.title +' by ' + this.author +", "+ this.numOfPages + 
         " pages, ";
         let hasRead = read ? "read" : "not read yet"
